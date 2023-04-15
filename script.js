@@ -16,8 +16,6 @@ const addEmployee = (event) => {
   employees.push({ id: employeeId, name, profession, age });
   employeeId++;
 
-  document.getElementById("messages").innerHTML = '<p style="color:lightgreen">Success: Employee added!</p>';
-
   const employeeList = document.getElementById("employee-list");
   employeeList.innerHTML = "";
   employees.forEach((employee) => {
@@ -39,14 +37,19 @@ const addEmployee = (event) => {
   document.getElementById("name").value = "";
   document.getElementById("profession").value = "";
   document.getElementById("age").value = "";
-  document.getElementById("messages").innerHTML = "";
+  document.getElementById("messages").innerHTML = '<p style="color:lightgreen">Success: Employee added!</p>';
 };
+
 
 const deleteEmployee = (event) => {
   const id = parseInt(event.target.getAttribute("data-id"));
+
   employees = employees.filter((employee) => employee.id !== id);
+  
   const employeeList = document.getElementById("employee-list");
+  
   employeeList.innerHTML = "";
+  
   employees.forEach((employee) => {
     const li = document.createElement("li");
     li.innerHTML = `<div style="display: flex;">
