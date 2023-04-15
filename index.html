@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container-1">
+        <h3 class="in-between">New Employees</h3>
+        <form>
+            <div class="container-2">
+                <div class="flex">
+                    <label for="name">Enter Name</label><br>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="flex">
+                    <label for="profession">Enter Profession</label><br>
+                    <input type="text" id="profession" required>
+                </div>
+                <div class="flex">
+                    <label for="age">Enter Age</label><br>
+                    <input type="number" id="age" min="0" required>
+                </div>
+            </div>
+            <div class="flex in-between">
+                <button type="submit" id="add-employee-btn">Add User</button>
+            </div>
+        </form>
+        <div class="in-between" id="messages"></div>
+        <h3 class="in-between">Added Employees</h3>
+        <ul class="in-between" id="employee-list"><h4 style="opacity: 0.5;"class="heading">You have 0 Employees.</h4></ul>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
